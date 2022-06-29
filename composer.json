@@ -7,6 +7,10 @@
         {
             "name": "Andrey Helldar",
             "email": "helldar@ai-rus.com"
+        },
+        {
+            "name": "Felipe Dsdev",
+            "homepage": "https://github.com/felipe-dsdev"
         }
     ],
     "require": {
