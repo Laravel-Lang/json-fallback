@@ -10,7 +10,7 @@
         }
     ],
     "require": {
-        "php": "^8.1",
+        "php": "^7.2 || ^8.0",
         "illuminate/support": "^9.19",
         "illuminate/translation": "^9.19"
     },
