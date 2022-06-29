@@ -1,0 +1,32 @@
+{
+    "name": "laravel-lang/json-fallback-hotfix",
+    "description": "Fixing a bug with processing fallback JSON keys",
+    "license": "MIT",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Andrey Helldar",
+            "email": "helldar@ai-rus.com"
+        }
+    ],
+    "require": {
+        "php": "^8.1",
+        "illuminate/support": "^9.19",
+        "illuminate/translation": "^9.19"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^7.5",
+        "phpunit/phpunit": "^9.5"
+    },
+    "minimum-stability": "stable",
+    "autoload": {
+        "psr-4": {
+            "LaravelLang\\JsonFallbackHotfix\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests"
+        }
+    }
+}
