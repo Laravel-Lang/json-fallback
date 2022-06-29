@@ -21,6 +21,15 @@ with `LaravelLang\JsonFallbackHotfix\TranslationServiceProvider::class`.
 
 It's all 😊
 
+## What's fixed
+
+Out of the box, Laravel does not allow fallback translations for JSON keys.
+
+For example, when you call `__('Remember Me')`, you get `Remember Me` instead of `Se souvenir de moi` for French fallback language.
+
+This package solves this problem.
+
+
 
 ## License
 
