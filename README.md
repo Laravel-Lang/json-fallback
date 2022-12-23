@@ -36,7 +36,7 @@ This package solves this problem.
 This package is licensed under the [MIT License](LICENSE).
 
 
-[badge_build]:          https://img.shields.io/github/workflow/status/laravel-lang/json-fallback-hotfix/phpunit?style=flat-square
+[badge_build]:          https://img.shields.io/github/actions/workflow/status/laravel-lang/json-fallback-hotfix/phpunit.yml?style=flat-square
 
 [badge_downloads]:      https://img.shields.io/packagist/dt/laravel-lang/json-fallback-hotfix.svg?style=flat-square
 
