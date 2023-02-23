@@ -8,32 +8,17 @@
 [![Github Workflow Status][badge_build]][link_build]
 [![License][badge_license]][link_license]
 
-## Installation
+## Documentation
 
-To get the latest version of `Laravel Lang: JSON Fallback Hotfix`, simply require the project using Composer:
+See the [documentation](https://laravel-lang.com) for detailed installation and [usage](https://laravel-lang.com/installation/json-fallback-hotfix.html) instructions.
 
-```bash
-composer require laravel-lang/json-fallback-hotfix
-```
+## Contributing
 
-Next, in the `providers` section of the `config/app.php` file, replace `Illuminate\Translation\TranslationServiceProvider::class`
-with `LaravelLang\JsonFallbackHotfix\TranslationServiceProvider::class`.
-
-It's all 😊
-
-## What's fixed
-
-Out of the box, Laravel [doesn't allow](https://github.com/laravel/framework/issues/41565#issuecomment-1073572954) fallback translations for JSON keys.
-
-For example, when you call `__('Remember Me')`, you get `Remember Me` instead of `Se souvenir de moi` for French fallback language.
-
-This package solves this problem.
-
-
+Please see [CONTRIBUTING](https://laravel-lang.com/contributing.html) for details.
 
 ## License
 
-This package is licensed under the [MIT License](LICENSE).
+This package is licensed under the [MIT License][link_license].
 
 
 [badge_build]:          https://img.shields.io/github/actions/workflow/status/laravel-lang/json-fallback-hotfix/phpunit.yml?style=flat-square
