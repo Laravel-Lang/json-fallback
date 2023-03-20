@@ -1,6 +1,6 @@
 # Laravel Lang: JSON Fallback Hotfix
 
-![laravel lang publisher](https://preview.dragon-code.pro/laravel-lang/json-fallback-hotfix.svg?brand=laravel&invert=1)
+![laravel lang publisher](https://preview.dragon-code.pro/laravel-lang/json-fallback-hotfix.svg?brand=laravel&mode=dark)
 
 [![Stable Version][badge_stable]][link_packagist]
 [![Unstable Version][badge_unstable]][link_packagist]
