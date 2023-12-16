@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace LaravelLang\JsonFallbackHotfix;
+namespace LaravelLang\JsonFallback;
 
 use Illuminate\Translation\TranslationServiceProvider as BaseServiceProvider;
 

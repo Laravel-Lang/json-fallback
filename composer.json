@@ -26,7 +26,7 @@
     "minimum-stability": "stable",
     "autoload": {
         "psr-4": {
-            "LaravelLang\\JsonFallbackHotfix\\": "src"
+            "LaravelLang\\JsonFallback\\": "src"
         }
     },
     "autoload-dev": {

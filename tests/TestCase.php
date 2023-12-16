@@ -6,7 +6,7 @@ namespace Tests;
 
 use Illuminate\Support\Facades\File;
 use Illuminate\Translation\TranslationServiceProvider;
-use LaravelLang\JsonFallbackHotfix\TranslationServiceProvider as FixedServiceProvider;
+use LaravelLang\JsonFallback\TranslationServiceProvider as FixedServiceProvider;
 use Orchestra\Testbench\TestCase as BaseTestCase;
 use RuntimeException;
 
