@@ -1,6 +1,4 @@
 {
-    "name": "laravel-lang/json-fallback-hotfix",
-    "description": "Fixing a bug with processing fallback JSON keys",
     "name": "laravel-lang/json-fallback",
     "description": "Adds support for fallback JSON string translation",
     "license": "MIT",
