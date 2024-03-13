@@ -1,26 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <!--~
-  ~ This file is part of the "Laravel-Lang/publisher" project.
+  ~ This file is part of the "dragon-code/json-fallback" project.
   ~
   ~ For the full copyright and license information, please view the LICENSE
   ~ file that was distributed with this source code.
   ~
   ~ @author Andrey Helldar <helldar@dragon-code.pro>
-  ~
-  ~ @copyright 2022 Andrey Helldar
-  ~
+  ~ @copyright 2024 Andrey Helldar
   ~ @license MIT
   ~
-  ~ @see https://github.com/Laravel-Lang/publisher
+  ~ @see https://github.com/TheDragonCode/json-fallback
   -->
 
 <phpunit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:noNamespaceSchemaLocation="https://schema.phpunit.de/9.3/phpunit.xsd"
+         xsi:noNamespaceSchemaLocation="https://schema.phpunit.de/10.0/phpunit.xsd"
          cacheResult="false"
          backupGlobals="false"
          backupStaticAttributes="false"
-         bootstrap="phpunit.php"
+         bootstrap="vendor/autoload.php"
          colors="true"
          convertErrorsToExceptions="true"
          convertNoticesToExceptions="true"
