@@ -22,7 +22,7 @@ use Illuminate\Translation\Translator as BaseTranslator;
 class Translator extends BaseTranslator
 {
     public function get($key, array $replace = [], $locale = null, $fallback = true)
-    {
+     {
         $locale = $locale ?: $this->locale;
 
         // For JSON translations, there is only one file per locale, so we will simply load
