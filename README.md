@@ -12,10 +12,6 @@
 
 See the [documentation](https://laravel-lang.com/packages-json-fallback.html) for detailed installation.
 
-## Communication
-
-We also have official [chats](https://t.me/addlist/l0XGtvEIBiljMTMy) in Telegram.
-
 ## Contributing
 
 Please see [CONTRIBUTING](https://laravel-lang.com/contributions.html) for details.
