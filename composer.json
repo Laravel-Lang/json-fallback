@@ -1,0 +1,38 @@
+{
+    "name": "laravel-lang/json-fallback",
+    "description": "Adds support for fallback JSON string translation",
+    "license": "MIT",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Andrey Helldar",
+            "email": "helldar@dragon-code.pro",
+            "homepage": "https://github.com/andrey-helldar"
+        },
+        {
+            "name": "Felipe Dsdev",
+            "homepage": "https://github.com/felipe-dsdev"
+        }
+    ],
+    "funding": [
+        {
+            "type": "boosty",
+            "url": "https://boosty.to/dragon-code"
+        },
+        {
+            "type": "yoomoney",
+            "url": "https://yoomoney.ru/to/410012608840929"
+        }
+    ],
+    "require": {
+        "php": "^8.3",
+        "illuminate/support": "^12.0 || ^13.0",
+        "illuminate/translation": "^12.0 || ^13.0"
+    },
+    "minimum-stability": "stable",
+    "autoload": {
+        "psr-4": {
+            "LaravelLang\\JsonFallback\\": "src/"
+        }
+    }
+}
