@@ -7,7 +7,7 @@ namespace LaravelLang\JsonFallback;
 use Illuminate\Foundation\Application;
 use Illuminate\Translation\TranslationServiceProvider;
 
-class LaravelLangJsonFallbackServiceProvider extends TranslationServiceProvider
+class JsonFallbackServiceProvider extends TranslationServiceProvider
 {
     #[\Override]
     public function register(): void
