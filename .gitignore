@@ -1,16 +1,5 @@
-.idea/
-build/
-node_modules/
 vendor/
 
-.env
-.cache
-.temp
-
-*.bak
-*.cache
-*.clover
-*.orig
-*.lock
-
-package-lock.json
+/.cache
+/.temp
+/.phpunit.cache

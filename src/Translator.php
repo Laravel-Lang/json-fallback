@@ -1,18 +1,5 @@
 <?php
 
-/**
- * This file is part of the "dragon-code/json-fallback" project.
- *
- * For the full copyright and license information, please view the LICENSE
- * file that was distributed with this source code.
- *
- * @author Andrey Helldar <helldar@dragon-code.pro>
- * @copyright 2024 Andrey Helldar
- * @license MIT
- *
- * @see https://github.com/TheDragonCode/json-fallback
- */
-
 declare(strict_types=1);
 
 namespace LaravelLang\JsonFallback;
@@ -21,7 +8,7 @@ use Illuminate\Translation\Translator as BaseTranslator;
 
 class Translator extends BaseTranslator
 {
-    public function get($key, array $replace = [], $locale = null, $fallback = true)
+    public function get($key, array $replace = [], $locale = null, $fallback = true): array|string
     {
         $locale = $locale ?: $this->locale;
 
@@ -49,11 +36,13 @@ class Translator extends BaseTranslator
             // the translator was instantiated. Then, we can load the lines and return.
             $locales = $fallback ? $this->localeArray($locale) : [$locale];
 
-            foreach ($locales as $locale) {
-                if (! is_null($line = $this->getLine($namespace, $group, $locale, $item, $replace))) {
+            foreach ($locales as $languageLineLocale) {
+                if (! is_null($line = $this->getLine($namespace, $group, $languageLineLocale, $item, $replace))) {
                     return $line;
                 }
             }
+
+            $key = $this->handleMissingTranslationKey($key, $replace, $locale, $fallback);
         }
 
         // If the line doesn't exist, we will return back the key which was requested as
