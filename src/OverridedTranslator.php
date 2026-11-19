@@ -4,9 +4,9 @@ declare(strict_types=1);
 
 namespace LaravelLang\JsonFallback;
 
-use Illuminate\Translation\Translator as BaseTranslator;
+use Illuminate\Translation\Translator;
 
-class Translator extends BaseTranslator
+class OverridedTranslator extends Translator
 {
     public function get($key, array $replace = [], $locale = null, $fallback = true): array|string
     {

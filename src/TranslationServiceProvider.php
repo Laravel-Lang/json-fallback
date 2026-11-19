@@ -13,10 +13,10 @@ class TranslationServiceProvider extends BaseServiceProvider
     {
         $this->registerLoader();
 
-        $this->app->singleton('translator', function (Application $app): Translator {
+        $this->app->singleton('translator', function (Application $app): OverridedTranslator {
             $loader = $app['translation.loader'];
 
-            $trans = new Translator($loader, $app->getLocale());
+            $trans = new OverridedTranslator($loader, $app->getLocale());
 
             $trans->setFallback($app->getFallbackLocale());
 
