@@ -6,7 +6,7 @@ namespace LaravelLang\JsonFallback;
 
 use Illuminate\Translation\Translator;
 
-class OverridedTranslator extends Translator
+final class OverridedTranslator extends Translator
 {
     public function get($key, array $replace = [], $locale = null, $fallback = true): array|string
     {
