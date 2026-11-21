@@ -8,6 +8,10 @@ use Illuminate\Translation\Translator;
 
 final class OverridedTranslator extends Translator
 {
+    /**
+     * @param  array<array-key, mixed>  $replace
+     * @return array<array-key, mixed>|string
+     */
     public function get($key, array $replace = [], $locale = null, $fallback = true): array|string
     {
         $locale = $locale ?: $this->locale;
