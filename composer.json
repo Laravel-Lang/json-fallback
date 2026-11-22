@@ -3,6 +3,12 @@
     "description": "Adds support for fallback JSON string translation",
     "license": "MIT",
     "type": "library",
+    "keywords": [
+        "laravel-lang",
+        "i18n",
+        "json-fallback",
+        "localization"
+    ],
     "authors": [
         {
             "name": "Andrey Helldar",
@@ -16,7 +22,9 @@
     ],
     "require": {
         "php": "^8.3",
-        "illuminate/translation": "^12.0 || ^13.0 || dev-master"
+        "illuminate/contracts": "^12.0 || ^13.0 || dev-master",
+        "illuminate/translation": "^12.0 || ^13.0 || dev-master",
+        "laravel-lang/exceptions": "self.version"
     },
     "minimum-stability": "stable",
     "autoload": {
