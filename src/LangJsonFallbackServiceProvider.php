@@ -4,8 +4,10 @@ declare(strict_types=1);
 
 namespace LaravelLang\JsonFallback;
 
+use Illuminate\Contracts\Translation\Loader;
 use Illuminate\Foundation\Application;
 use Illuminate\Translation\TranslationServiceProvider as BaseServiceProvider;
+use TypeError;
 
 final class LangJsonFallbackServiceProvider extends BaseServiceProvider
 {
@@ -15,6 +17,10 @@ final class LangJsonFallbackServiceProvider extends BaseServiceProvider
 
         $this->app->singleton('translator', function (Application $app): OverridedTranslator {
             $loader = $app['translation.loader'];
+
+            if (! $loader instanceof Loader) {
+                throw new TypeError('The translation.loader binding must implement ' . Loader::class);
+            }
 
             $trans = new OverridedTranslator($loader, $app->getLocale());
 
