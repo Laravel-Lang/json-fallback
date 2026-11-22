@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace LaravelLang\JsonFallback;
 
 use Illuminate\Translation\Translator;
+use TypeError;
 
 final class OverridedTranslator extends Translator
 {
@@ -52,6 +53,16 @@ final class OverridedTranslator extends Translator
         // If the line doesn't exist, we will return back the key which was requested as
         // that will be quick to spot in the UI if language keys are wrong or missing
         // from the application's language files. Otherwise we can return the line.
-        return $this->makeReplacements($line ?: $key, $replace);
+        $line = $line ?: $key;
+
+        if ($replace !== []) {
+            return $this->makeReplacements($line, $replace);
+        }
+
+        if (is_string($line) || is_array($line)) {
+            return $line;
+        }
+
+        throw new TypeError('A translation must be a string or an array.');
     }
 }
