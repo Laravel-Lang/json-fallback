@@ -5,7 +5,7 @@ declare(strict_types=1);
 namespace LaravelLang\JsonFallback;
 
 use Illuminate\Translation\Translator;
-use TypeError;
+use LaravelLang\Exceptions\InvalidTranslationValueException;
 
 final class OverridedTranslator extends Translator
 {
@@ -63,6 +63,6 @@ final class OverridedTranslator extends Translator
             return $line;
         }
 
-        throw new TypeError('A translation must be a string or an array.');
+        throw new InvalidTranslationValueException;
     }
 }
