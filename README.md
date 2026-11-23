@@ -12,11 +12,11 @@
 
 ## Documentation
 
-See the [documentation](https://laravel-lang.com/20.x/translations#json-fallback) for detailed installation.
+See the [documentation](https://laravel-lang.com/translations#json-fallback) for detailed installation.
 
 ## Contributing
 
-Please see [CONTRIBUTING](https://laravel-lang.com/20.x/contributing) for details.
+Please see [CONTRIBUTING](https://laravel-lang.com/contributing) for details.
 
 ## Support Us
 
@@ -24,7 +24,7 @@ Please see [CONTRIBUTING](https://laravel-lang.com/20.x/contributing) for detail
 
 ## License
 
-This package is licensed under the [MIT License](https://laravel-lang.com/20.x/license).
+This package is licensed under the [MIT License](https://laravel-lang.com/license).
 
 [badge_build]: https://img.shields.io/github/actions/workflow/status/laravel-lang/json-fallback/tests.yml?style=flat-square
 [badge_downloads]: https://img.shields.io/packagist/dt/laravel-lang/json-fallback.svg?style=flat-square
