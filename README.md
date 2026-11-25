@@ -12,7 +12,7 @@
 
 ## Documentation
 
-See the [documentation](https://laravel-lang.com/start) for detailed information.
+[Enable fallback for JSON translations.](https://laravel-lang.com/translations#json-fallback)
 
 ## Contributing
 
