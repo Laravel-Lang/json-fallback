@@ -1,27 +1,33 @@
 <?php
 
-/**
- * This file is part of the "dragon-code/json-fallback" project.
- *
- * For the full copyright and license information, please view the LICENSE
- * file that was distributed with this source code.
- *
- * @author Andrey Helldar <helldar@dragon-code.pro>
- * @copyright 2024 Andrey Helldar
- * @license MIT
- *
- * @see https://github.com/TheDragonCode/json-fallback
- */
-
 declare(strict_types=1);
 
 namespace LaravelLang\JsonFallback;
 
-use Illuminate\Translation\Translator as BaseTranslator;
+use Illuminate\Translation\Translator;
+use LaravelLang\Exceptions\InvalidTranslationValueException;
 
-class Translator extends BaseTranslator
+final class OverridedTranslator extends Translator
 {
-    public function get($key, array $replace = [], $locale = null, $fallback = true)
+    /** @param  string  $key */
+    public function has($key, $locale = null, $fallback = true): bool
+    {
+        if (parent::has($key, $locale, $fallback)) {
+            return true;
+        }
+
+        if (! $fallback) {
+            return false;
+        }
+
+        return isset($this->loaded['*']['*'][$this->fallback][$key]);
+    }
+
+    /**
+     * @param  array<array-key, mixed>  $replace
+     * @return array<array-key, mixed>|string
+     */
+    public function get($key, array $replace = [], $locale = null, $fallback = true): array|string
     {
         $locale = $locale ?: $this->locale;
 
@@ -49,16 +55,28 @@ class Translator extends BaseTranslator
             // the translator was instantiated. Then, we can load the lines and return.
             $locales = $fallback ? $this->localeArray($locale) : [$locale];
 
-            foreach ($locales as $locale) {
-                if (! is_null($line = $this->getLine($namespace, $group, $locale, $item, $replace))) {
+            foreach ($locales as $languageLineLocale) {
+                if (! is_null($line = $this->getLine($namespace, $group, $languageLineLocale, $item, $replace))) {
                     return $line;
                 }
             }
+
+            $key = $this->handleMissingTranslationKey($key, $replace, $locale, $fallback);
         }
 
         // If the line doesn't exist, we will return back the key which was requested as
         // that will be quick to spot in the UI if language keys are wrong or missing
         // from the application's language files. Otherwise we can return the line.
-        return $this->makeReplacements($line ?: $key, $replace);
+        $line = $line ?: $key;
+
+        if ($replace !== []) {
+            return $this->makeReplacements($line, $replace);
+        }
+
+        if (is_string($line) || is_array($line)) {
+            return $line;
+        }
+
+        throw new InvalidTranslationValueException;
     }
 }
